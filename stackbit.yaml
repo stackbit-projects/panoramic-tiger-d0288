@@ -279,6 +279,24 @@ models:
         name: seo
         models:
           - stackbit_page_meta
+  react:
+    type: page
+    urlPath: /react
+    label: Blog
+    layout: blog
+    file: blog/index.md
+    hideContent: true
+    singleInstance: true
+    fields:
+      - type: string
+        name: title
+        label: Title
+        description: The title of the page.
+        required: true
+      - type: model
+        name: seo
+        models:
+          - stackbit_page_meta        
   page:
     type: page
     label: Page

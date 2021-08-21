@@ -2,8 +2,8 @@
     "layout_style": "overflow",
     "palette": "blue",
     "header": {
-        "title": "Stackbit Fresh",
-        "tagline": "Header Tagline",
+        "title": "Sysnar",
+        "tagline": "sysnar be a Dev",
         "profile_img": "images/avatar.png",
         "profile_img_alt": "Author avatar",
         "background": "dark",
@@ -20,8 +20,18 @@
                 "style": "link"
             },
             {
-                "label": "Style Guide",
-                "url": "/style-guide/",
+                "label": "React",
+                "url": "/react/",
+                "style": "link"
+            },
+            {
+                "label": "NodeJS",
+                "url": "/nodejs/",
+                "style": "link"
+            },
+            {
+                "label": "알고리즘",
+                "url": "/algorithms/",
                 "style": "link"
             },
             {
@@ -53,7 +63,7 @@
             },
             {
                 "label": "GitHub",
-                "url": "https://github.com/",
+                "url": "https://github.com/sysnar",
                 "style": "icon",
                 "icon_class": "github",
                 "new_window": true
@@ -67,7 +77,7 @@
             },
             {
                 "label": "DEV",
-                "url": "https://dev.to/",
+                "url": "https://sysnar.xyz/",
                 "style": "icon",
                 "icon_class": "dev",
                 "new_window": true
@@ -77,6 +87,6 @@
     "footer": {
         "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=fresh&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>"
     },
-    "title": "Stackbit Fresh Theme",
+    "title": "sysnar be a Dev",
     "domain": "https://panoramic-tiger-d0288.netlify.app"
 }

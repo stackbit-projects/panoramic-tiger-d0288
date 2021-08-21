@@ -4,7 +4,7 @@ hide_title: true
 sections:
   - section_id: hero
     type: section_hero
-    title: 'Hi, I''m Stackbit Fresh.'
+    title: 'Hi, I''m SySNar.'
     content: >-
       This section can contain a subtitle or tagline. The recommended length is
       one to three sentences, but can be changed as you prefer.
@@ -19,14 +19,6 @@ sections:
     actions:
       - label: Contact Me
         url: /contact
-        style: button
-  - section_id: recent-posts
-    type: section_posts
-    title: Recent Posts
-    posts_number: 4
-    actions:
-      - label: View Blog
-        url: blog/index.html
         style: button
 seo:
   title: Stackbit Fresh Theme
