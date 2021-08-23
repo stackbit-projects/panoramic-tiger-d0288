@@ -4,6 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/browser-apis/
  */
 
+require("prismjs/themes/prism.css")
 // onPreRouteUpdate() and onRouteUpdate() are called before onInitialClientRender,
 // use initialized flag to ensure that window.onGatsbyPreRouteUpdate() and
 // window.onGatsbyRouteUpdate() will not be called before
