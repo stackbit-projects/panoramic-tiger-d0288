@@ -25,6 +25,11 @@
                 "style": "link"
             },
             {
+                "label": "TypeScript",
+                "url": "/typescript/",
+                "style": "link"
+            },
+            {
                 "label": "NodeJS",
                 "url": "/nodejs/",
                 "style": "link"
