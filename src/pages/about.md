@@ -1,11 +1,11 @@
 ---
 title: About Me
-subtitle: This is a short page about me and my work.
+subtitle: 대충 템플릿에 있는 자기소개글 그대로 가져다 놓은 글
 img_path: images/about.jpg
 img_alt: Portrait of a man with beard and mustache
 seo:
   title: About Me
-  description: This is the about me page
+  description: 대충 템플릿에 있는 자기소개글 그대로 가져다 놓은 글
   extra:
     - name: 'og:type'
       value: website

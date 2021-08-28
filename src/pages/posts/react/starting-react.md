@@ -1,17 +1,17 @@
 ---
-title: Basic Rules For Walking In The Mountains
+title: React.JS 시작하기
 excerpt: >-
   Hiking can sometimes involves bushwhacking and hiking is sometimes referred to
   as such. This specifically refers to difficult walking through dense forest,
   undergrowth, or bushes, where forward progress requires pushing vegetation
   aside.
-date: '2018-01-09'
-thumb_img_path: images/6.jpg
+date: '2021-08-22'
+thumb_img_path: images/reactLogo.png
 thumb_img_alt: Hikers on the trail
-content_img_path: images/6.jpg
+content_img_path: images/reactLogo.png
 content_img_alt: Hikers on the trail
 seo:
-  title: Basic Rules For Walking In The Mountains
+  title: React.JS 시작하기
   description: >-
     Hiking refers to difficult walking through dense forest, undergrowth, or
     bushes.
@@ -28,7 +28,7 @@ seo:
         bushes.
       keyName: property
     - name: 'og:image'
-      value: images/6.jpg
+      value: images/reactLogo.png
       keyName: property
       relativeUrl: true
     - name: 'twitter:card'
@@ -40,23 +40,27 @@ seo:
         Hiking refers to difficult walking through dense forest, undergrowth, or
         bushes.
     - name: 'twitter:image'
-      value: images/6.jpg
+      value: images/reactLogo.png
       relativeUrl: true
 template: post
 ---
 
-Photo by [David Marcu.](https://unsplash.com/photos/wcHCzgo0_mQ)
+# React 프로젝트 TypeScript로 시작하기
 
-In the United States, Canada, the Republic of Ireland, and United Kingdom, **hiking** refers to walking outdoors on a trail, or off trail, for recreational purposes. A day hike refers to a hike that can be completed in a single day. However, in the United Kingdom, the word walking is also used, as well as rambling, while walking in mountainous areas is called hillwalking. In Northern England, Including the Lake District and Yorkshire Dales, fellwalking describes hill or mountain walks, as fell is the common word for both features there.
+기존 Vanilla JS를 활용하여 웹 페이지의 이벤트를 제작하면서, 재사용성을 가지고 보다 재미있는 프론트엔드 환경을 원하게 되었다.
+그 과정에서 TypeScript를 적용하여 객체지향의 특성을 지닌 웹 프로젝트를 만들게 되었다.
 
-Hiking can sometimes involves bushwhacking and hiking is sometimes referred to as such. This specifically refers to difficult walking through dense forest, undergrowth, or bushes, where forward progress requires pushing vegetation aside. In extreme cases of bushwhacking, where the vegetation is so dense that human passage is impeded, a machete is used to clear a pathway. The Australian term bushwalking refers to both on and off-trail hiking. Common terms for hiking used by [New Zealanders](https://en.wikipedia.org/wiki/New_Zealand) are tramping (particularly for overnight and longer trips), walking or bushwalking. Trekking is the preferred word used to describe multi-day hiking in the mountainous regions of India, Pakistan, Nepal, North America, South America, Iran and in the highlands of East Africa. Hiking a long-distance trail from end-to-end is also referred to as trekking and as thru-hiking in some places. In North America, multi-day hikes, usually with camping, are referred to as [backpacking](https://en.wikipedia.org/wiki/Backpacking_(wilderness)).
+#### 간단하게 TypeScript를 적용하게 된 이유를 나열해보았다.
+1. 정적 타입, '컴파일 언어'  
+`<span style="color: yellow;">ㅁㄴㅇㄹ</span>`  
+2. 자바스크립트 호환성
+3. 객체지향 프로그래밍 지원
+```js {numberLines:21}
+return 'blah';
+```
 
-## Long Distance Hiking
-
-Frequently nowadays long distance hikes (walking tours) are undertaken along long distance paths, including the National Trails in England and Wales, the National Trail System in the USA and The Grande Randonnée (France), Grote Routepaden, or Lange-afstand-wandelpaden (Holland), Grande Rota (Portugal), Gran Recorrido (Spain) is a network of long-distance footpaths in Europe, mostly in France, Belgium, the Netherlands and Spain. There are extensive networks in other European countries of long distance trails, as well as in Canada, Australia, New Zealand, Nepal, and to a lesser extent other Asiatic countries, like Turkey, Israel, and Jordan. In the Alps of Austria, Slovenia, Switzerland, Germany, France, and Italy walking tours are often made from 'hut-to-hut', using an extensive system of mountain huts.
-
-In the late 20th-century there has been a proliferation of official and unofficial long distance routes, which mean that hikers now are more likely to refer to using a long distance way (Britain), trail (USA), The Grande Randonnée (France), etc., than setting out on a walking tour. Early examples of long distance paths, include the Appalachian Trail in the USA and the Pennine Way in Britain. Pilgrimage routes are now treated, by some walkers, as long distance routes, and the route taken by the British National Trail the North Downs Way closely follows that of the Pilgrims' Way to Canterbury. Hiking times can be estimated by Naismith's rule or Tobler's hiking function.
-
+•asdf• 
+**This is a paragraph**. 
 ## Equipment
 
 The equipment required for hiking depends on the length of the hike, but day hikers generally carry at least water, food, a map, and rain-proof gear. Hikers usually wear sturdy hiking boots for mountain walking and backpacking, as protection from the rough terrain, as well as providing increased stability. The Mountaineers club recommends a list of "Ten Essentials" equipment for hiking, including a compass, sunglasses, sunscreen, a flashlight, a first aid kit, a fire starter, and a knife. Other groups recommend items such as hat, gloves, insect repellent, and an emergency blanket. A GPS navigation device can also be helpful and route cards may be used as a guide.
