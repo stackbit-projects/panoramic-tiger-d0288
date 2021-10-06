@@ -4,7 +4,7 @@
   "version": "0.0.1",
   "license": "MIT",
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve",

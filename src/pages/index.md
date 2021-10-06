@@ -4,7 +4,7 @@ hide_title: true
 sections:
   - section_id: hero
     type: section_hero
-    title: 'Hi, I''m SySNar.'
+    title: 'Hi, I''m SYSNAR.'
     content: >-
       제가 살아가면서 몰랐던 것들, 기록하고 싶은 것들을 저장하는 장소입니다. 
       여기에 작성된 글들이 언젠가 누군가에게는 도움이 되는 것을 바라며 기록합니다.
