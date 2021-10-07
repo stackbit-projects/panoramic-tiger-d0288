@@ -79,9 +79,9 @@ alert(x); // 'change'
 javascript의 특성상 변수의 범위를 호출한 함수의 Local Scope부터 전역 변수들이 있는 
 Global Scope까지 범위를 점차 넓혀가며 찾기 때문에 함수 ex의 Scope 내에 없는 변수 x를 찾아 값을 변경하게 됩니다.  
 만약 함수 ex 내에 변수 x가 존재했다면 지역변수 x에 값을 할당하고 전역변수의 값은 변경되지 않았을 것 입니다.  
-...  
-![Awesome image](scopeExample.png)  
-...  
+
+![Awesome image](../../../images/scopeExample.png)   
+
 
 ## Scope Chain  
 
