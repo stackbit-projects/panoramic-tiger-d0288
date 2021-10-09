@@ -84,6 +84,23 @@ Global Scope까지 범위를 점차 넓혀가며 찾기 때문에 함수 ex의 S
 
 
 ## Scope Chain  
+전역변수와 지역변수 같의 관계에서 나오는 개념이다.  
+내부 함수에서는 외부에 접근이 가능하지만 외부에서는 접근이 불가능한 특성을 가진다.  
+아래의 예시에서 확인이 가능하듯이 내부 함수에서 선언되어 있지 않은 name이라는 변수를 호출할 때  
+계속적으로 스코프를 확장해나가며 결과적으로는 전역변수를 호출하는 것을 확인할 수 있다.
+```js {numberLines}
+var name = 'zero';
+function outer() {
+  console.log('외부', name);
+  function inner() {
+    var enemy = 'nero';
+    console.log('내부', name);
+  }
+  inner();
+}
+outer();
+console.log(enemy); // undefined
+```
 
 
 ## Lexical Scoping  
