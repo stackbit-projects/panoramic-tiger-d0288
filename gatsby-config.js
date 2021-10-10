@@ -6,6 +6,7 @@ module.exports = {
     plugins: [
         `gatsby-plugin-react-helmet`,
         `gatsby-source-data`,
+        `gatsby-transformer-remark`,
         `gatsby-plugin-sharp`,
         {
             resolve: `gatsby-transformer-remark`,
@@ -67,6 +68,6 @@ module.exports = {
                 sourceUrlPath: `fields.url`,
                 pageContextProperty: `menus`,
             }
-        },
+        }
     ]
 };
