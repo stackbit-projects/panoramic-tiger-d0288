@@ -104,6 +104,32 @@ console.log(enemy); // undefined
 
 
 ## Lexical Scoping  
+```js {numberLines}
+var name = 'zero';
+function log() {
+  console.log(name);
+}
+
+function wrapper() {
+  name = 'nero';
+  log();
+}
+wrapper(); // nero
+```
+
+```js {numberLines}
+var name = 'zero';
+function log() {
+  console.log(name);
+}
+
+function wrapper() {
+  var name = 'nero';
+  log();
+}
+wrapper(); //zero
+```
+
 
 출처 :   
 https://www.zerocho.com/category/Javascript/post/5740531574288ebc5f2ba97e  
