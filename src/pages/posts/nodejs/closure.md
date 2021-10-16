@@ -49,9 +49,9 @@ template: post
 
 javascript 에서의 this를 공부하기 전 scope의 개념을 정확하게 설명할 수 있도록 정리하려고 합니다.
 
-1. 실행 컨텍스트 (Execution Context)
-2. 클로저
-3. lexical scoping
+1. [실행 컨텍스트 (Execution Context)](https://sysnar.github.io/posts/nodejs/scope/)
+2. [클로저](https://sysnar.github.io/posts/nodejs/closure/)
+3. [lexical scoping](https://sysnar.github.io/posts/nodejs/lexical%20scoping/)
 
 ## Execution Context?
 우선 `Execution Context`라는 단어의 뜻은 아래와 같다.  
