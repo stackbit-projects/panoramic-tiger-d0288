@@ -49,9 +49,9 @@ template: post
 
 javascript 에서의 this를 공부하기 전 scope의 개념을 정확하게 설명할 수 있도록 정리하려고 합니다.
 
-1. 실행 컨텍스트 (Execution Context)
-2. 클로저
-3. lexical scoping
+1. [실행 컨텍스트 (Execution Context)](https://sysnar.github.io/posts/nodejs/scope/)
+2. [클로저](https://sysnar.github.io/posts/nodejs/closure/)
+3. [lexical scoping](https://sysnar.github.io/posts/nodejs/lexical%20scoping/)
 
 ## Execution Context?
 우선 `Execution Context`라는 단어의 뜻은 아래와 같다.  
@@ -72,5 +72,36 @@ function say () { // (4)변수 선언 (5)변수 대입
 
 say(); // (7)
 ```
+
+```js {numverLines}
+function outerFunc() {
+  var x = 10;
+  var innerFunc = function () { console.log(x); };
+  return innerFunc;
+}
+
+/**
+ *  함수 outerFunc를 호출하면 내부 함수 innerFunc가 반환된다.
+ *  그리고 함수 outerFunc의 실행 컨텍스트는 소멸한다.
+ */
+var inner = outerFunc();
+inner(); // 10
+```
+```js {numverLines}
+function outerFunc() {
+  var x = 10;
+  var innerFunc = function () { console.log(x); };
+  return innerFunc;
+}
+
+/**
+ *  함수 outerFunc를 호출하면 내부 함수 innerFunc가 반환된다.
+ *  그리고 함수 outerFunc의 실행 컨텍스트는 소멸한다.
+ */
+var inner = outerFunc();
+inner(); // 10
+```
+
+
 
 출처 : https://www.zerocho.com/category/JavaScript/post/5741d96d094da4986bc950a0
