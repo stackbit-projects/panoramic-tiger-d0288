@@ -53,54 +53,19 @@ javascript 에서의 this를 공부하기 전 scope의 개념을 정확하게 �
 2. [클로저](https://sysnar.github.io/posts/nodejs/closure/)
 3. [lexical scoping](https://sysnar.github.io/posts/nodejs/lexical%20scoping/)
 
-## Execution Context?
-우선 `Execution Context`라는 단어의 뜻은 아래와 같다.  
-실행 문맥 : javascript가 실행되는 문법의 흐름
-   
-```js {numberLines}
-var name = 'zero'; // (1)변수 선언 (6)변수 대입
+## Closure
 
-function wow(word) { // (2)변수 선언 (3)변수 대입
-  console.log(word + ' ' + name); // (11)
-}
-
-function say () { // (4)변수 선언 (5)변수 대입
-  var name = 'nero'; // (8)
-  console.log(name); // (9)
-  wow('hello'); // (10)
-}
-
-say(); // (7)
+``` js {numberLines}
+var makeClosure = function() {
+  var name = 'zero';
+  return function () {
+    console.log(name);
+  }
+};
+var closure = makeClosure(); // function () { console.log(name); }
+closure(); // 'zero';
 ```
 
-```js {numverLines}
-function outerFunc() {
-  var x = 10;
-  var innerFunc = function () { console.log(x); };
-  return innerFunc;
-}
-
-/**
- *  함수 outerFunc를 호출하면 내부 함수 innerFunc가 반환된다.
- *  그리고 함수 outerFunc의 실행 컨텍스트는 소멸한다.
- */
-var inner = outerFunc();
-inner(); // 10
-```
-```js {numverLines}
-function outerFunc() {
-  var x = 10;
-  var innerFunc = function () { console.log(x); };
-  return innerFunc;
-}
-
-/**
- *  함수 outerFunc를 호출하면 내부 함수 innerFunc가 반환된다.
- *  그리고 함수 outerFunc의 실행 컨텍스트는 소멸한다.
- */
-var inner = outerFunc();
-inner(); // 10
-```
 
 
 
