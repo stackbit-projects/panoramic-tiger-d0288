@@ -54,3 +54,14 @@ template: post
 제대로된 query를 보내지 못하고 데이터값을 null을 뿜는 현상이었습니다...
 
 ## 꺼진 함수 다시보자
+``` js {numberLines}
+const mainFunc = () => {
+  query = 'SELECT * FROM TABLE_NAME;'
+  // long term db query
+}
+
+const interceptFunc = () => {
+  query = 'INSTER ~~~';
+  // insert & select db query
+}
+```
