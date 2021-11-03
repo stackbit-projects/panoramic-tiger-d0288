@@ -64,4 +64,7 @@ const interceptFunc = () => {
   query = 'INSTER ~~~';
   // insert & select db query
 }
+
+위와 같이 query가 함수 내에 선언되지 않을 경우 전역변수로 선언이 되게 되며
+이에 따라 하나의 변수를 여러 함수가 공유하여 side effect를 야기할 수 있습니다.
 ```
