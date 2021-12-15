@@ -2,9 +2,9 @@
   "layout_style": "overflow",
   "palette": "blue",
   "header": {
-    "title": "SYSNAR",
-    "tagline": "Be a Dev",
-    "profile_img": "images/avatar.png",
+    "title": "김상윤",
+    "tagline": "Junior Web Developer",
+    "profile_img": "images/profile-avatar.png",
     "profile_img_alt": "Author avatar",
     "background": "dark",
     "has_nav": true,
