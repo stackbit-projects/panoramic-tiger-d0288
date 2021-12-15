@@ -2,7 +2,7 @@
 title: NestJS Testing Module
 excerpt: >-
   NestJS의 유닛테스트를 작성하기 위한 jest & testing 모듈 사용법 정리
-date: "2021-12-5 23:00"
+date: "2021-12-05 23:00"
 thumb_img_path: images/nestjsLogo.png
 thumb_img_alt: Hikers on the trail
 content_img_path: images/nestjsLogo.png
