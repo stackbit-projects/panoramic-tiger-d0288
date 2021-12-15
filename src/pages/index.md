@@ -21,17 +21,17 @@ sections:
         url: /contact
         style: button
 seo:
-  title: Stackbit Fresh Theme
-  description: The preview of the Fresh theme
+  title: SYSNAR DEV BLOG
+  description: SYSNAR DEV BLOG
   extra:
     - name: "og:type"
       value: website
       keyName: property
     - name: "og:title"
-      value: Stackbit Fresh Theme
+      value: SYSNAR DEV BLOG
       keyName: property
     - name: "og:description"
-      value: The preview of the Fresh theme
+      value: SYSNAR DEV BLOG
       keyName: property
     - name: "og:image"
       value: images/4.jpg
@@ -40,9 +40,9 @@ seo:
     - name: "twitter:card"
       value: summary_large_image
     - name: "twitter:title"
-      value: Stackbit Fresh Theme
+      value: SYSNAR DEV BLOG
     - name: "twitter:description"
-      value: The preview of the Fresh theme
+      value: SYSNAR DEV BLOG
     - name: "twitter:image"
       value: images/4.jpg
       relativeUrl: true
