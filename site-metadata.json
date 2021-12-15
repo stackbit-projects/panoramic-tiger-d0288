@@ -1,92 +1,87 @@
 {
-    "layout_style": "overflow",
-    "palette": "blue",
-    "header": {
-        "title": "SYSNAR",
-        "tagline": "Be a Dev",
-        "profile_img": "images/avatar.png",
-        "profile_img_alt": "Author avatar",
-        "background": "dark",
-        "has_nav": true,
-        "nav_links": [
-            {
-                "label": "Home",
-                "url": "/",
-                "style": "link"
-            },
-            {
-                "label": "Blog",
-                "url": "/blog/",
-                "style": "link"
-            },
-            {
-                "label": "React",
-                "url": "/react/",
-                "style": "link"
-            },
-            {
-                "label": "NodeJS",
-                "url": "/nodejs/",
-                "style": "link"
-            },
-            {
-                "label": "알고리즘",
-                "url": "/algorithms/",
-                "style": "link"
-            },
-            {
-                "label": "About",
-                "url": "/about/",
-                "style": "link"
-            },
-            {
-                "label": "Contact",
-                "url": "/contact/",
-                "style": "link"
-            }
-        ],
-        "has_social": true,
-        "social_links": [
-            {
-                "label": "Twitter",
-                "url": "https://twitter.com/",
-                "style": "icon",
-                "icon_class": "twitter",
-                "new_window": true
-            },
-            {
-                "label": "Instagram",
-                "url": "https://www.instagram.com/",
-                "style": "icon",
-                "icon_class": "instagram",
-                "new_window": true
-            },
-            {
-                "label": "GitHub",
-                "url": "https://github.com/sysnar",
-                "style": "icon",
-                "icon_class": "github",
-                "new_window": true
-            },
-            {
-                "label": "LinkedIn",
-                "url": "https://www.linkedin.com/",
-                "style": "icon",
-                "icon_class": "linkedin",
-                "new_window": true
-            },
-            {
-                "label": "DEV",
-                "url": "https://sysnar.xyz/",
-                "style": "icon",
-                "icon_class": "dev",
-                "new_window": true
-            }
-        ]
-    },
-    "footer": {
-        "content": "&copy; Stackbit. All rights reserved. This Jamstack site was created with <a href=\"https://www.stackbit.com/?utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">Stackbit</a>. Create yours <a href=\"https://app.stackbit.com/create?theme=fresh&utm_source=deployed-footer\" target=\"_blank\" rel=\"noopener\">now</a>"
-    },
-    "title": "sysnar be a Dev",
-    "domain": "https://panoramic-tiger-d0288.netlify.app"
+  "layout_style": "overflow",
+  "palette": "blue",
+  "header": {
+    "title": "SYSNAR",
+    "tagline": "Be a Dev",
+    "profile_img": "images/avatar.png",
+    "profile_img_alt": "Author avatar",
+    "background": "dark",
+    "has_nav": true,
+    "nav_links": [
+      {
+        "label": "Home",
+        "url": "/",
+        "style": "link"
+      },
+      {
+        "label": "javascript",
+        "url": "/javascript/",
+        "style": "link"
+      },
+      {
+        "label": "Nest.js",
+        "url": "/nestjs/",
+        "style": "link"
+      },
+      {
+        "label": "React.js",
+        "url": "/react/",
+        "style": "link"
+      },
+      {
+        "label": "알고리즘",
+        "url": "/algorithms/",
+        "style": "link"
+      },
+      {
+        "label": "About",
+        "url": "/about/",
+        "style": "link"
+      }
+    ],
+    "has_social": true,
+    "social_links": [
+      {
+        "label": "Twitter",
+        "url": "https://twitter.com/",
+        "style": "icon",
+        "icon_class": "twitter",
+        "new_window": true
+      },
+      {
+        "label": "Instagram",
+        "url": "https://www.instagram.com/",
+        "style": "icon",
+        "icon_class": "instagram",
+        "new_window": true
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/sysnar",
+        "style": "icon",
+        "icon_class": "github",
+        "new_window": true
+      },
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/",
+        "style": "icon",
+        "icon_class": "linkedin",
+        "new_window": true
+      },
+      {
+        "label": "DEV",
+        "url": "https://sysnar.xyz/",
+        "style": "icon",
+        "icon_class": "dev",
+        "new_window": true
+      }
+    ]
+  },
+  "footer": {
+    "content": "@contact: sysn4r@gmail.com"
+  },
+  "title": "sysnar be a Dev",
+  "domain": "https://sysnar.github.io/"
 }

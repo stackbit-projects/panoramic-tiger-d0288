@@ -16,7 +16,7 @@ sections:
       - input_type: email
         name: email
         label: Email
-        default_value: Your email address
+        default_value: sysn4r@gmail.com
         is_required: true
       - input_type: select
         name: subject
@@ -40,20 +40,20 @@ seo:
   title: Contact
   description: This is the contact page
   extra:
-    - name: 'og:type'
+    - name: "og:type"
       value: website
       keyName: property
-    - name: 'og:title'
+    - name: "og:title"
       value: Contact
       keyName: property
-    - name: 'og:description'
+    - name: "og:description"
       value: This is the contact page
       keyName: property
-    - name: 'twitter:card'
+    - name: "twitter:card"
       value: summary
-    - name: 'twitter:title'
+    - name: "twitter:title"
       value: Contact
-    - name: 'twitter:description'
+    - name: "twitter:description"
       value: This is the contact page
 template: advanced
 ---
