@@ -3,7 +3,7 @@
   "palette": "blue",
   "header": {
     "title": "김상윤",
-    "tagline": "Junior Web Developer",
+    "tagline": "Web Developer",
     "profile_img": "images/profile-avatar.png",
     "profile_img_alt": "Author avatar",
     "background": "dark",
@@ -17,6 +17,11 @@
       {
         "label": "javascript",
         "url": "/javascript/",
+        "style": "link"
+      },
+      {
+        "label": "typescript",
+        "url": "/typescript/",
         "style": "link"
       },
       {

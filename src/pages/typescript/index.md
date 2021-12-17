@@ -1,8 +1,8 @@
 ---
-title: javascript
+title: typescript
 seo:
-  title: javascript
-  description: This is the Javascript page
+  title: typescript
+  description: This is the Typescript page
   extra:
     - name: "og:type"
       value: website
@@ -26,5 +26,5 @@ seo:
     - name: "twitter:image"
       value: images/1.jpg
       relativeUrl: true
-template: javascript
+template: typescript
 ---
