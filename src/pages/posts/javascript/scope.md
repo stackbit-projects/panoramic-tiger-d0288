@@ -1,11 +1,8 @@
 ---
 title: Javascript Execution Context
 excerpt: >-
-  Hiking can sometimes involves bushwhacking and hiking is sometimes referred to
-  as such. This specifically refers to difficult walking through dense forest,
-  undergrowth, or bushes, where forward progress requires pushing vegetation
-  aside.
-date: '2021-10-06 24:00'
+  자바스크립트가 실행되는 문법의 흐름을 정리
+date: "2021-10-06 24:00"
 thumb_img_path: images/jsLogo.png
 thumb_img_alt: Hikers on the trail
 content_img_path: images/jsLogo.png
@@ -16,30 +13,30 @@ seo:
     Hiking refers to difficult walking through dense forest, undergrowth, or
     bushes.
   extra:
-    - name: 'og:type'
+    - name: "og:type"
       value: article
       keyName: property
-    - name: 'og:title'
+    - name: "og:title"
       value: Basic Rules For Walking In The Mountains
       keyName: property
-    - name: 'og:description'
+    - name: "og:description"
       value: >-
         Hiking refers to difficult walking through dense forest, undergrowth, or
         bushes.
       keyName: property
-    - name: 'og:image'
+    - name: "og:image"
       value: images/jsLogo.png
       keyName: property
       relativeUrl: true
-    - name: 'twitter:card'
+    - name: "twitter:card"
       value: summary_large_image
-    - name: 'twitter:title'
+    - name: "twitter:title"
       value: Basic Rules For Walking In The Mountains
-    - name: 'twitter:description'
+    - name: "twitter:description"
       value: >-
         Hiking refers to difficult walking through dense forest, undergrowth, or
         bushes.
-    - name: 'twitter:image'
+    - name: "twitter:image"
       value: images/jsLogo.png
       relativeUrl: true
 template: post
@@ -49,25 +46,28 @@ template: post
 
 javascript 에서의 this를 공부하기 전 scope의 개념을 정확하게 설명할 수 있도록 정리하려고 합니다.
 
-1. [실행 컨텍스트 (Execution Context)](https://sysnar.github.io/posts/nodejs/scope/)
-2. [클로저](https://sysnar.github.io/posts/nodejs/closure/)
-3. [lexical scoping](https://sysnar.github.io/posts/nodejs/lexical%20scoping/)
+1. [실행 컨텍스트 (Execution Context)](https://sysnar.github.io/posts/javascript/scope/)
+2. [클로저](https://sysnar.github.io/posts/javascript/closure/)
+3. [lexical scoping](https://sysnar.github.io/posts/javascript/lexical%20scoping/)
 
 ## Execution Context?
+
 우선 `Execution Context`라는 단어의 뜻은 아래와 같다.  
 실행 문맥 : javascript가 실행되는 문법의 흐름
-   
-```js {numberLines}
-var name = 'zero'; // (1)변수 선언 (6)변수 대입
 
-function wow(word) { // (2)변수 선언 (3)변수 대입
-  console.log(word + ' ' + name); // (11)
+```js {numberLines}
+var name = "zero"; // (1)변수 선언 (6)변수 대입
+
+function wow(word) {
+  // (2)변수 선언 (3)변수 대입
+  console.log(word + " " + name); // (11)
 }
 
-function say () { // (4)변수 선언 (5)변수 대입
-  var name = 'nero'; // (8)
+function say() {
+  // (4)변수 선언 (5)변수 대입
+  var name = "nero"; // (8)
   console.log(name); // (9)
-  wow('hello'); // (10)
+  wow("hello"); // (10)
 }
 
 say(); // (7)

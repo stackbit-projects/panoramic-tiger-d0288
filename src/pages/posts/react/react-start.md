@@ -39,4 +39,18 @@ seo:
 template: post
 ---
 
+![Awesome image](../../../images/react-event-handler.png)
+
 # React 시작하기
+
+React에서 onClick과 같은 이벤트를 핸들링할 수 있는 이벤트 핸들러에 매개변수를 전달할 때 아래의 규칙을 따르는 것 같다.
+
+```js
+functionName(...params, e[Event객체 혹은 this])
+```
+
+공식 문서에서 이렇게 사용하라고 되어 있으나 e, ...params와 같이 사용할 수 없는 이유에 대해서는 아직 의문이다.
+
+이부분은 추가적으로 구글링하여 업데이트할 계획이다.
+
+출처 : https://ko.reactjs.org/docs/handling-events.html
