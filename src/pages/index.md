@@ -4,46 +4,46 @@ hide_title: true
 sections:
   - section_id: hero
     type: section_hero
-    title: 'Hi, I''m SYSNAR.'
+    title: "안녕하세요"
     content: >-
-      This section can contain a subtitle or tagline. The recommended length is
-      one to three sentences, but can be changed as you prefer.
+      이부분에는 환영인사말을 적어놓으면 좋을 것 같습니다.
   - section_id: about
     type: section_content
-    title: About
+    title: About ME
     content: >-
-      This is the "about" excerpt. It can be used to provide a paragraph about
-      yourself that people can read on the homepage to get a sense of who you
-      are. There also exists a dedicated about page where you can write more
-      about yourself for those who are interested.
+      ### 이부분에는 자신에 대한 소개를 작성해놓으면 좋을 것 같습니다     
+
+      문제의 이유를 찾는 개발자 ㄱ미상윤입니다.   
+
+      asdf
     actions:
       - label: Contact Me
         url: /contact
         style: button
 seo:
-  title: Stackbit Fresh Theme
-  description: The preview of the Fresh theme
+  title: SYSNAR DEV BLOG
+  description: SYSNAR DEV BLOG
   extra:
-    - name: 'og:type'
+    - name: "og:type"
       value: website
       keyName: property
-    - name: 'og:title'
-      value: Stackbit Fresh Theme
+    - name: "og:title"
+      value: SYSNAR DEV BLOG
       keyName: property
-    - name: 'og:description'
-      value: The preview of the Fresh theme
+    - name: "og:description"
+      value: SYSNAR DEV BLOG
       keyName: property
-    - name: 'og:image'
+    - name: "og:image"
       value: images/4.jpg
       keyName: property
       relativeUrl: true
-    - name: 'twitter:card'
+    - name: "twitter:card"
       value: summary_large_image
-    - name: 'twitter:title'
-      value: Stackbit Fresh Theme
-    - name: 'twitter:description'
-      value: The preview of the Fresh theme
-    - name: 'twitter:image'
+    - name: "twitter:title"
+      value: SYSNAR DEV BLOG
+    - name: "twitter:description"
+      value: SYSNAR DEV BLOG
+    - name: "twitter:image"
       value: images/4.jpg
       relativeUrl: true
 template: advanced
