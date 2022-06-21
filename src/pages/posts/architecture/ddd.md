@@ -3,9 +3,9 @@ title: 도메인 아키텍처
 excerpt: >-
 
 date: "2022-06-21"
-thumb_img_path: images/reactLogo.png
+thumb_img_path: images/architecture-thumbnail.png
 thumb_img_alt: reactLogo
-content_img_path: images/reactLogo.png
+content_img_path: images/architecture-thumbnail.png
 content_img_alt: reactLogo
 seo:
   title: 도메인 아키텍처

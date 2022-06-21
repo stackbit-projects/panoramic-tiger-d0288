@@ -13,6 +13,26 @@
         "label": "Home",
         "url": "/",
         "style": "link"
+      },      
+      {
+        "label": "Architecture",
+        "url": "/architecture",
+        "style": "link"
+      },
+      {
+        "label": "Spring",
+        "url": "/spring",
+        "style": "link"
+      },
+      {
+        "label": "Spring Data / JPA",
+        "url": "/jpa/",
+        "style": "link"
+      },
+      {
+        "label": "DevOps",
+        "url": "/devops",
+        "style": "link"
       },
       {
         "label": "javascript",
@@ -27,11 +47,6 @@
       {
         "label": "Nest.js",
         "url": "/nestjs/",
-        "style": "link"
-      },
-      {
-        "label": "Spring",
-        "url": "/spring/",
         "style": "link"
       },
       {
