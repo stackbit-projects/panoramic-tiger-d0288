@@ -56,3 +56,10 @@ Nest.JS에서 사용하던 방식 : https://jojoldu.tistory.com/605
 출처: https://kim-solshar.tistory.com/70 [김솔샤르의 인사이트]
 
 
+
+git pull origin main --allow-unrelated-histories
+
+
+
+
+
