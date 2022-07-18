@@ -3,9 +3,9 @@ title: Spring Security의 WebSecurityConfigurerAdapter Deprecated
 excerpt: >-
 
 date: "2022-03-28"
-thumb_img_path: images/jpaLogo.png
+thumb_img_path: images/springBootLogo-3.jpeg
 thumb_img_alt: reactLogo
-content_img_path: images/jpaLogo.png
+content_img_path: images/springBootLogo-3.jpeg
 content_img_alt: reactLogo
 seo:
   title: Spring Security의 WebSecurityConfigurerAdapter Deprecated
