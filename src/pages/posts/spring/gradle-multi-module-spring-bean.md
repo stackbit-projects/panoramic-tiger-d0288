@@ -3,9 +3,9 @@ title: Gradle 멀티모듈 시스템 구성 시 스프링 빈 등록 문제
 excerpt: >-
 
 date: "2022-07-20"
-thumb_img_path: images/springBootLogo-3.jpeg
+thumb_img_path: images/springgradle.png
 thumb_img_alt: reactLogo
-content_img_path: images/springBootLogo-3.jpeg
+content_img_path: images/springgradle.png
 content_img_alt: reactLogo
 seo:
   title: Gradle 멀티모듈 시스템 구성 시 스프링 빈 등록 문제
