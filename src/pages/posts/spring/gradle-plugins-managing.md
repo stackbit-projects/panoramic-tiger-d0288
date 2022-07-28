@@ -43,6 +43,9 @@ template: post
 ## 개요
 사이드 프로젝트에서 gradle.build 파일을 수정하면서 생긴 궁금점을 정리합니다.
 
+기존에는 apply plugin 이라는 명령을 통해 gradle에서 프로젝트에 Task를 추가했다.
+그러나 현제 사용하고 있는 Gradle v.7 이후에서는 plugins 라는 명령을 통해 Task를 관리하고 있다.
+
 참고자료 : 
 https://docs.gradle.org/current/userguide/plugins.html
 https://doughman.tistory.com/19
