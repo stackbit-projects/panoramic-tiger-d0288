@@ -3,9 +3,9 @@ title: Spring JPA 연관관계 유지하며 ForeignKey 제거하기
 excerpt: >-
 
 date: "2022-03-28"
-thumb_img_path: images/jpaLogo.png
+thumb_img_path: images/jpa-logo.png
 thumb_img_alt: reactLogo
-content_img_path: images/jpaLogo.png
+content_img_path: images/jpa-logo.png
 content_img_alt: reactLogo
 seo:
   title: React 시작하기
