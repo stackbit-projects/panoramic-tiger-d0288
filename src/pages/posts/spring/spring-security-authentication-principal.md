@@ -78,9 +78,17 @@ Authentication authentication = SecurityContexHolder.getContext()
 
 ## AuthenticationPrincipalArgumentResolver
 그럼 한번 Resolver가 어떻게 동작하는지 과정을 알아보겠습니다.
-![](2022-08-21-14-02-02.png)
+![](./images/2022-08-21-14-02-02.png)
 
 
 ## 관련 포스팅
 [[Spring Security] @AuthenticationPrincipal 어노테이션은 어떻게 동작할까??](https://sas-study.tistory.com/410)
 [스프링 주요 아키텍처의 이해](https://catsbi.oopy.io/f9b0d83c-4775-47da-9c81-2261851fe0d0)
+
+
+```json
+{
+    "code": "INACTIVATE_USER",
+    "message": "User is inactive"
+}
+```
