@@ -69,7 +69,8 @@ dependencies {
 }
 ```
 
-출처 : 
-[옛날 Gradle 설정방식](https://stackoverflow.com/questions/5644011/multi-project-test-dependencies-with-gradle)
+출처 :   
+[옛날 Gradle 설정방식](https://stackoverflow.com/questions/5644011/multi-project-test-dependencies-with-gradle)  
 [Gradle7 공식문서 설정방식](https://docs.gradle.org/current/userguide/java_testing.html#sec:java_test_fixtures)
-[한국어 Fixture 설정방식 설명](https://bottom-to-top.tistory.com/58)
+[한국어 Fixture 설정방식 설명](https://bottom-to-top.tistory.com/58)  
+[테스트 의존성 관리로 높은 품질의 테스트 코드 유지하기](https://toss.tech/article/how-to-manage-test-dependency-in-gradle)
