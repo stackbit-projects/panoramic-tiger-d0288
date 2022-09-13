@@ -62,7 +62,7 @@ Controller에서 직접적으로 유효성 검증을 처리하는 어노테이�
 정리에 앞서 `@Valid` 어노테이션은 JSR 303(Java Specification Requests) 스펙으로 Bean Validator를 이용해 객체의 제약조건을 검증하도록 지시하는 어노테이션 입니다!  
 Spring Validation에서는 
 관련해 더 자세한 사항은 [스프링 공식문서](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/validation.html)를 통해 확인이 가능합니다.
-![](./images/2022-09-03-23-07-11.png)
+![](../../../../images/2022-09-03-23-07-11.png)
 
 ## @Valid의 동작원리 
 Spring으로 들어오는 모든 요청은 Front-Controller Pattern을 구현한 `Dispatcher-Servlet`으로 들어오게 됩니다.  
@@ -72,7 +72,7 @@ Spring으로 들어오는 모든 요청은 Front-Controller Pattern을 구현한
 <!-- 내 언어로 수정필요 -->
 대표적으로 @RequestBody는 Json 메세지를 객체로 변환해주는 작업이 ArgumentResolver의 구현체인  
 RequestResponseBodyMethodProcessor가 처리하며, 이 내부에서 @Valid로 시작하는 어노테이션이 있을 경우에 유효성 검사를 진행한다.   
-(이러한 이유로 @Valid가 아니라 커스톰 어노테이션인 @ValidMangKyu여도 동작한다.)   
+(이러한 이유로 @Valid가 아니라 커스텀 어노테이션인 @ValidXXXX여도 동작한다.)   
 만약 @ModelAttribute를 사용중이라면 ModelAttributeMethodProcessor에 의해 @Valid가 처리된다.
 
 그리고 검증에 오류가 있다면 MethodArgumentNotValidException 예외가 발생하게 되고, 디스패처 서블릿에 기본으로 등록된 예외 리졸버(Exception Resolver)인 DefaultHandlerExceptionResolver에 의해 400 BadRequest 에러가 발생한다.
@@ -80,12 +80,11 @@ RequestResponseBodyMethodProcessor가 처리하며, 이 내부에서 @Valid로 �
 이러한 이유로 @Valid는 기본적으로 컨트롤러에서만 동작하며 기본적으로 다른 계층에서는 검증이 되지 않는다. 다른 계층에서 파라미터를 검증하기 위해서는 @Validated와 결합되어야 하는데, 아래에서 @Validated와 함께 자세히 살펴보도록 하자.
 <!-- 내 언어로 수정필요 -->
 
-
 # @Validated
 앞서 설명했다시피 Spring의 기본적인 유효성 검증은 Controller에서 이루어진다.   
 다만, Controller뿐만 아니라 다른 영역(Service, Repository)에서도 유효성 검증을 필요로 할 수 있다.  
 이러한 요구사항을 만족시키기 위해 사용하는 것이 `@Validated` 어노테이션 입니다.
-![](./images/2022-09-03-23-08-33.png)
+![](../../../../images/2022-09-03-23-08-33.png)
 
 ## 출처 : 
 [스프링 공식문서 - 7. Validate](https://docs.spring.io/spring-framework/docs/3.2.x/spring-framework-reference/html/validation.html)  
