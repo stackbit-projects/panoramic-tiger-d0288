@@ -72,3 +72,5 @@ yarn-error.log
 *lock.json 
 
 package-lock.json
+
+.vscode/settings.json

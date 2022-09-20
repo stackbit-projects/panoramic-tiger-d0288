@@ -1,3 +1,7 @@
 {
-  "editor.defaultFormatter": "vscode.markdown-math"
+  "editor.defaultFormatter": "vscode.markdown-math",
+  "pasteImage.basePath": "../../../images",
+  "pasteImage.path": "${projectRoot}/static/images",
+  "pasteImage.namePrefix": "",
+  "pasteImage.insertPattern": "${imageSyntaxPrefix}../../../images/${imageFileName}${imageSyntaxSuffix}"
 }
