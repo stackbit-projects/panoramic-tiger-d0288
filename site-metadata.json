@@ -18,6 +18,11 @@
         "label": "Architecture",
         "url": "/architecture",
         "style": "link"
+      },      
+      {
+        "label": "Database",
+        "url": "/database",
+        "style": "link"
       },
       {
         "label": "Spring",
