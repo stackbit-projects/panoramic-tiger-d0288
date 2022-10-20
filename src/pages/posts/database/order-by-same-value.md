@@ -308,11 +308,99 @@ Execution Time: 0.111 ms
 ---
 
 ### Merge Sort
-정렬 시 필요한 데이터의 크기가 `work_mem`보다 클 경우 옵티마이저는 `Merge Sort` 알고리즘을 선택해 정렬한다.
+정렬 시 필요한 데이터의 크기가 `work_mem`보다 클 경우 옵티마이저는 `Merge Sort` 알고리즘을 선택해 정렬한다.  
+이를 확인해보기 위해서 db의 `work_mem`을 아래와 같이 줄이고 테스트 해보면 예상대로 실행계획이 Merge Sort를 사용해 정렬하는 것을 확인할 수 있다.
 
+```sql
+-- (1) 많은 테스트 데이터 삽입 (점수 20점)
+INSERT INTO leaderboard(id, team_name, score, submit_at)
+SELECT
+    ids.idx AS id,
+    array_to_string(ARRAY(SELECT chr(65 + round(ids.idx % 26) :: integer) FROM generate_series(1,5)), '') AS team_name,
+    20 AS score,
+    (dates.date + interval '1 HOUR' * ids.idx) as submit_at
+FROM ( SELECT '2022-09-01'::DATE AS date ) dates
+CROSS JOIN ( SELECT generate_series(301, 13000) AS idx ) ids;
+
+
+-- (2) 사용 가능한 work_mem 확인 및 축소
+postgres.public> SHOW work_mem;
+ work_mem
+------------
+ 4MB
+
+postgres.public> SET work_mem = '64kB';
+postgres.public> SHOW work_mem;
+ work_mem
+------------
+ 64kB
+
+
+ -- (3) 많은 테스트 데이터 삽입 (점수 20점)
+postgres.public> EXPLAIN ANALYZE
+                 SELECT ctid, id, team_name, score, submit_at FROM leaderboard ORDER BY score DESC
+QUERY PLAN
+---------------------------------------------------------------------------------------------------------------------------
+Sort  (cost=120.81..124.06 rows=1301 width=28) (actual time=15.185..21.683 rows=1301 loops=1)
+  Sort Key: score DESC
+  Sort Method: external merge  Disk: 64kB
+  ->  Seq Scan on leaderboard  (cost=0.00..22.01 rows=1301 width=28) (actual time=0.015..7.351 rows=1301 loops=1)
+Planning Time: 0.044 ms
+Execution Time: 27.902 ms
+```
+
+여기에 Merge Sort에는 다른 정렬과는 다르게 Stable Sorting이라는 특징이 있다. 
+아래 사진을 통해 보면 `Heap Sort`는 무작위로 값이 정렬되는 반면, `Merge Sort`는 항상 정해진 값을 내려주는 사실을 확인할 수 있다.  
+(ctid 값을 보면 1번은 뒤죽박죽으로 섞여있지만, 2번은 일관된 순서로 조회되고 있음을 알 수 있다.)
+
+![](../../../images/2022-10-20-14-46-34.png)  
+(1. Heap Sort를 사용한 경우)
+
+![](../../../images/2022-10-20-14-48-09.png)
+(2. Merge Sort를 사용한 경우)
+
+마지막으로 하나 더 알아두어야 할 것이 있는데 바로 OFFSET 값 증가에 따른 사용 메모리양 증가다. LIMIT 값이 10으로 고정되어 있더라도 OFFSET 값이 바뀜에 따라 쿼리 실행에 필요한 메모리 크기가 달라질 수 있다.  
+이해를 위해 예시를 들어 설명하면 페이징 처리 시 페이지 수가 낮은 경우에는 `Heap Sort`가 적용되다가 페이지 수가 많아져 OFFSET 같이 커지는 경우 `Merge Sort`가 적용되어 조회되는 게시물의 순서가 뒤바뀌는 문제가 발생할 수도 있다.   
+
+```sql
+-- (1) LIMIT 200, OFFSET 0 (Memory: 40kB)
+postgres.public> EXPLAIN ANALYZE
+                 SELECT ctid, id, team_name, score, submit_at FROM leaderboard ORDER BY score DESC LIMIT 200
+QUERY PLAN
+---------------------------------------------------------------------------------------------------------------------------
+Limit  (cost=78.24..78.74 rows=200 width=28) (actual time=14.929..17.647 rows=200 loops=1)
+  ->  Sort  (cost=78.24..81.49 rows=1301 width=28) (actual time=14.918..15.846 rows=200 loops=1)
+        Sort Key: score DESC
+        Sort Method: top-N heapsort  Memory: 40kB
+        ->  Seq Scan on leaderboard  (cost=0.00..22.01 rows=1301 width=28) (actual time=0.014..7.430 rows=1301 loops=1)
+Planning Time: 0.050 ms
+Execution Time: 18.598 ms
+
+
+
+-- (2) LIMIT 200, OFFSET 1000 (Memory: 560kB)
+postgres.public> EXPLAIN ANALYZE
+                 SELECT ctid, id, team_name, score, submit_at FROM leaderboard ORDER BY score DESC LIMIT 200 OFFSET 1000
+QUERY PLAN
+---------------------------------------------------------------------------------------------------------------------------
+Limit  (cost=2258.56..2258.68 rows=10 width=28) (actual time=135.169..135.420 rows=10 loops=1)
+  ->  Limit  (cost=2258.56..2259.06 rows=200 width=28) (actual time=135.159..135.331 rows=10 loops=1)
+        ->  Sort  (cost=2256.06..2297.92 rows=16743 width=28) (actual time=126.884..130.991 rows=1010 loops=1)
+              Sort Key: leaderboard.score DESC
+              Sort Method: external merge  Disk: 560kB
+              ->  Seq Scan on leaderboard  (cost=0.00..276.43 rows=16743 width=28) (actual time=0.012..61.390 rows=13001 loops=1)
+Planning Time: 0.092 ms
+Execution Time: 135.661 ms
+
+```
+
+<br/>
 
 # 결론
-ㅁㄴㅇㄹ
+1. 중복값이 존재하는 컬럼을 기준으로 정렬할 경우 꼭 UNIQUE 한 값을 가지는 컬럼을 ORDER BY 조건 뒤에 추가해줘야 조회 시 데이터가 잘못 정렬되는 경우를 방지할 수 있다.
+2. 해결 방법은 비교적 간단한(?) 문제였지만 문제가 발생하는 근본적인 이유, 그 이유로 인해 발생할 수 있는 사이드 이펙트 등을 고려하는 건 다른 문제라는 걸 깨닳았다.
+3. 복잡한 쿼리를 짤 때는 항상 실행계획을 통해 쿼리가 내가 의도한 대로 동작하는 지 확인하는 작업이 필요할 것 같다.
+4. 단순히 CRUD 수준의 Database 지식이 멈추지 말고 실제 동작원리 수준을 이해하고 사용해야 진정 "이해했다"라고 할 수 있을 것 같다. 문제 해결에만 집중하지 말고 해결과정, 해결 후 개선방안에도 집중해서 공부하는 사람이 되자.
 
 출처 : 
 [레딧 질문글1](https://www.reddit.com/r/PostgreSQL/comments/ni2l9u/why_is_a_query_with_limit_returning_results_in_a/)  
